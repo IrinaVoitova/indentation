@@ -1,0 +1,39 @@
+.contents {
+    background-color: #F1F1F1;
+    border-radius: 10px;
+    width: 1140px;
+    height: 215px;
+    position: relative;
+    left: -30px;
+    margin-bottom: 25px;
+}
+
+.contents__title {
+    margin: 0;
+    font-weight: 700;
+    font-size: 44px;
+    height: 53px;
+    left: 45px;
+    top: 25px;
+    position: absolute;
+}
+
+.contents__list {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 70px;
+    top: 98px;
+}
+
+.contents__link {
+    color: #02535F;
+    text-decoration-line: underline;
+    text-decoration-color: #000000;
+}
+
+.contents__item {
+    font-size: 20px;
+    line-height: 120%;
+    padding-bottom: 10px;
+}
