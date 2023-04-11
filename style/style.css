@@ -1,14 +1,14 @@
 @import url('fonts.css');
 
-@import url('header.css');
+@import url('container.css');
 
 @import url('contents.css');
 
-@import url('link-1.css');
+@import url('indent-adjacent-elements.css');
 
-@import url('link-2.css');
+@import url('indent-last-element.css');
 
-@import url('link-3.css');
+@import url('indent.css');
 
 @import url('footer.css');
 
@@ -29,21 +29,4 @@ body {
     font-size: 20px;
     line-height: 120%;
     color: #000000;
-}
-
-.container {
-    width: 1140px;
-    padding: 30px 30px 0 30px;
-    margin: 30px auto 25px auto;
-}
-
-.container__title {
-    font-weight: 900;
-    font-size: 60px;
-    height: 72px;
-    margin: 0 0 30px 0;
-}
-
-.main {
-    padding: 25px 0 25px 0;
 }

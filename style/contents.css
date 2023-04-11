@@ -5,7 +5,6 @@
     height: 215px;
     position: relative;
     left: -30px;
-    margin-bottom: 25px;
 }
 
 .contents__title {
@@ -28,12 +27,16 @@
 
 .contents__link {
     color: #02535F;
-    text-decoration-line: underline;
-    text-decoration-color: #000000;
+    text-decoration: none;
+    border-bottom: 1px solid #000;
 }
 
 .contents__item {
     font-size: 20px;
     line-height: 120%;
     padding-bottom: 10px;
+}
+
+.contents__item:last-child {
+    padding-bottom: 0;
 }

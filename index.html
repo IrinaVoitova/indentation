@@ -11,74 +11,69 @@
 <body>
     <article class="container">
         <h1 class="container__title">Отступы в вёрстке: margin и padding</h1>
-        <div class="header">
-            <p class="header__paragraph">В этой статье я рассмотрю самые популярные "стандартные" решения для сохранения смысла и хорошей читаемости вашего кода. Если точнее — речь пойдет об основных правилах организации отступов. Они сильно влияют на общую функциональность кода и, если всё сделано верно, позволяют легко вносить изменения в любую его часть. При этом другие части кода продолжат нормально работать.</p>
-            <p class="header__paragraph">Как это часто бывает, знание базовых принципов поможет проявить гибкость и выйти за их пределы. Эти знания особенно важны для начинающих, но также будут полезным напоминанием и для более опытных верстальщиков. Итак, поговорим о фундаментальных основах работы с отступами в вёрстке.</p>
-        </div>
-        <div class="main">
-            <nav class="contents">
-                <h2 class="contents__title">Содержание:</h2>
-                <ol class="contents__list">
-                    <a href="#link-1" class="contents__link"><li class="contents__item">Отступ задается от предыдущего элемента к следующему</li></a>
-                    <a href="#link-2" class="contents__link"><li class="contents__item">Отступ задается последнему возможному элементу в DOM-дереве</li></a>
-                    <a href="#link-3" class="contents__link"><li class="contents__item">Для последнего элемента группы отступ обнуляется</li></a>
-                </ol>
-            </nav>
-            <section class="link-1" id="link-1">
-                <h3 class="link-1__title">Отступ задается от предыдущего элемента к следующему: 
+        <p class="container__paragraph-1">В этой статье я рассмотрю самые популярные "стандартные" решения для сохранения смысла и хорошей читаемости вашего кода. Если точнее — речь пойдет об основных правилах организации отступов. Они сильно влияют на общую функциональность кода и, если всё сделано верно, позволяют легко вносить изменения в любую его часть. При этом другие части кода продолжат нормально работать.</p>
+        <p class="container__paragraph-2">Как это часто бывает, знание базовых принципов поможет проявить гибкость и выйти за их пределы. Эти знания особенно важны для начинающих, но также будут полезным напоминанием и для более опытных верстальщиков. Итак, поговорим о фундаментальных основах работы с отступами в вёрстке.</p>
+        <nav class="contents">
+            <h2 class="contents__title">Содержание:</h2>
+            <ol class="contents__list">
+                <li class="contents__item"><a href="#indent" class="contents__link">Отступ задается от предыдущего элемента к следующему</a></li>
+                <li class="contents__item"><a href="#indent-adjacent-elements" class="contents__link">Отступ задается последнему возможному элементу в DOM-дереве</a></li>
+                <li class="contents__item"><a href="#indent-last-element" class="contents__link">Для последнего элемента группы отступ обнуляется</a></li>
+            </ol>
+        </nav>
+        <section class="indent" id="indent">
+            <h3 class="indent__title">Отступ задается от предыдущего элемента к следующему: 
 от первого ко второму, сверху вниз, слева направо.</h3>
-                <div class="link-1__block">
-                    <img class="link-1__img link-1__img-1" src="img/img1.png" alt="Наглядный пример использования margin">
-                </div>
-                <div class="link-1__block link-1__block-2">
-                    <p class="link-1__p link-1__block-2_p"><b>ВАЖНО:</b> <i>margin</i> всегда задают от предыдущего элемента к следующему.</p>
-                    <p class="link-1__p link-1__block-2_p">Свойство <i>margin</i> необходимо только для того, чтобы отодвинуть своего соседа справа или снизу, поэтому используется <i>margin-right</i> и <i>margin-bottom</i>.</p>
-                    <p class="link-1__p link-1__block-2_p">(!) Свойства <i>margin-left</i> и <i>margin-top</i> используются крайне редко.</p>
-                    <p class="link-1__p link-1__block-2_p">Для <i>padding</i> верно обратное. Исключением является его применения в декоративных целях, например, для увеличения области ссылки.</p>
-                </div>
-                <div class="link-1__block link-1__block-3">
-                    <p class="link-1__p link-1__block-3_p">Отступ внутри блока сверху или слева реализуется через <i>padding-top</i> и <i>padding-left</i> родителя.</p>
-                    <p class="link-1__p link-1__block-3_p">Отступы, как правило, делают в направлении от предыдущего элемента к следующему. Так элемент не будет толкать сам себя.</p>
-                    <p class="link-1__p link-1__block-3_p">Изначально элемент статичен, а его положение может меняться только под воздействием свойств других блоков или свойств родителя.</p>
-                </div>
-                <div class="link-1__block">
-                    <img class="link-1__img link-1__img-2" src="img/img2.png" alt="Наглядный пример использования padding">
-                </div>
-            </section>
-            <section class="link-2" id="link-2">
-                <h3 class="link-2__title">Отступ задается последнему возможному элементу в DOM-дереве</h3>
-                <p class="link-2__p">Вообще, margin задают исключительно между соседними элементами DOM-дерева. Для примера, посмотрите на этот список:</p>
-                <img class="link-2__img link-2__img-1" src="img/img3.png" alt="HTML-код 'Полезные рецепты'">
-                <img class="link-2__img link-2__img-2" src="img/img4.png" alt="Web-отображение 'Полезные рецепты'">
-                <p class="link-2__p">Отступ делают за счёт соседних элементов, а не дочерних:</p>
-                <img class="link-2__img link-2__img-3" src="img/img5.png" alt="Отображение кода страницы 'Полезные рецепты' в браузере">
-                <p class="link-2__p">Казалось бы, можно задать отступ параграфу <i>&lt;p&gt;</i>, либо обёртке <i>&lt;article&gt;</i> для достижения той же цели. Внешне останется все точно также, но так делать не рекомендуется.</p>
-                <p class="link-2__p">Предыдущий пример был достаточно простым, но бывает вложенность значительно больше.</p>
-                <img class="link-2__img link-2__img-4" src="img/img6.png" alt="Фрагмент html-кода">
-                <p class="link-2__p">В случае с заголовком, если ему необходим отступ сверху, последним элементом будет <i>section</i>. Именно для него задается <i>padding-top</i>, а не <i>div</i> с классом <i>container</i>. Свойства <i>margin</i>, которые стоят по умолчанию необходимо обнулить.</p>
-                <img class="link-2__img link-2__img-5" src="img/img7.png" alt="Отображение использования padding на web-странице">
-                <p class="link-2__p">Это необходимо для более простого поиска отступов в будущем — для вас или того, кто будет верстать после вас. Кроме того, возможны серьёзные проблемы при динамическом дублировании или выводе вёрстки с нестандартной структурой отступов.</p>
-            </section>
-            <section class="link-3" id="link-3">
-                <h3 class="link-3__title">Для последнего элемента группы отступ всегда обнуляется</h3>
-                <p class="link-3__p">Для наглядности возьмём наш предыдущий пример с рецептами</p>
-                <p class="link-3__p">Между рецептами расстояние одинаковое. Можно заметить, что и до следующего блока расстояние такое же.</p>
-                <img class="link-3__img link-3__img-1" src="img/img8.png" alt="Отображение отступов одинакового размера на web-странице">
-                <p class="link-3__p">В соответствии со вторым принципом: последний <i>margin</i> обнуляется, а нижний отступ задаётся через <i>padding</i> для <i>section</i>. Я чаще всего задаю <i>padding</i> для секции с обоих сторон, если расстояние между секциями 100px задаю секциям <i>padding-top:50px</i> и <i>padding-bottom:50px</i>.</p>
-                <img class="link-3__img link-3__img-2" src="img/img9.png" alt="Отображение отступов одинакового размера на web-странице через просмотрщик кода">
-                <img class="link-3__img link-3__img-3" src="img/img10.png" alt="Фрагмент html-кода">
-                <img class="link-3__img link-3__img-4" src="img/img11.png" alt="Отображение строки навигации на web-странице">
-                <p class="link-3__p">Для большего понимания рассмотрим другой пример, который часто встречается на практике:</p>
-                <img class="link-3__img link-3__img-5" src="img/img12.png" alt="Фрагмент html-кода">
-                <img class="link-3__img link-3__img-6" src="img/img13.png" alt="Фрагмент html-кода">
-                <p class="link-3__p">Здесь нас интересует отступ между пунктами меню и списком с кнопкой поиска. Отступы между пунктами меню задаются так:</p>
-                <img class="link-3__img link-3__img-7" src="img/img14.png" alt="Фрагмент html-кода">
-                <p class="link-3__p">Советую использовать псевдоклассы :last-child чаще других, например так:</p>
-                <img class="link-3__img link-3__img-8" src="img/img15.png" alt="Фрагмент html-кода">
-            </section>
-        </div>
-        <div class="footer">
-            <div class="footer__container">
+            <div class="indent__block">
+                <img class="indent__img indent__img-1" src="img/img1.png" alt="Наглядный пример использования margin">
+            </div>
+            <div class="indent__block indent__block-2">
+                <p class="indent__p indent__p_block-2"><b>ВАЖНО:</b> <i>margin</i> всегда задают от предыдущего элемента к следующему.</p>
+                <p class="indent__p indent__p_block-2">Свойство <i>margin</i> необходимо только для того, чтобы отодвинуть своего соседа справа или снизу, поэтому используется <i>margin-right</i> и <i>margin-bottom</i>.</p>
+                <p class="indent__p indent__p_block-2">(!) Свойства <i>margin-left</i> и <i>margin-top</i> используются крайне редко.</p>
+                <p class="indent__p indent__p_block-2">Для <i>padding</i> верно обратное. Исключением является его применения в декоративных целях, например, для увеличения области ссылки.</p>
+            </div>
+            <div class="indent__block indent__block-3">
+                <p class="indent__p indent__p_block-3">Отступ внутри блока сверху или слева реализуется через <i>padding-top</i> и <i>padding-left</i> родителя.</p>
+                <p class="indent__p indent__p_block-3">Отступы, как правило, делают в направлении от предыдущего элемента к следующему. Так элемент не будет толкать сам себя.</p>
+                <p class="indent__p indent__p_block-3">Изначально элемент статичен, а его положение может меняться только под воздействием свойств других блоков или свойств родителя.</p>
+            </div>
+            <div class="indent__block">
+                <img class="indent__img indent__img-2" src="img/img2.png" alt="Наглядный пример использования padding">
+            </div>
+        </section>
+        <section class="indent-adjacent-elements" id="indent-adjacent-elements">
+            <h3 class="indent-adjacent-elements__title">Отступ задается последнему возможному элементу в DOM-дереве</h3>
+            <p class="indent-adjacent-elements__p">Вообще, margin задают исключительно между соседними элементами DOM-дерева. Для примера, посмотрите на этот список:</p>
+            <img class="indent-adjacent-elements__img indent-adjacent-elements__img-1" src="img/img3.png" alt="HTML-код 'Полезные рецепты'">
+            <img class="indent-adjacent-elements__img indent-adjacent-elements__img-2" src="img/img4.png" alt="Web-отображение 'Полезные рецепты'">
+            <p class="indent-adjacent-elements__p">Отступ делают за счёт соседних элементов, а не дочерних:</p>
+            <img class="indent-adjacent-elements__img indent-adjacent-elements__img-3" src="img/img5.png" alt="Отображение кода страницы 'Полезные рецепты' в браузере">
+            <p class="indent-adjacent-elements__p">Казалось бы, можно задать отступ параграфу <i>&lt;p&gt;</i>, либо обёртке <i>&lt;article&gt;</i> для достижения той же цели. Внешне останется все точно также, но так делать не рекомендуется.</p>
+            <p class="indent-adjacent-elements__p">Предыдущий пример был достаточно простым, но бывает вложенность значительно больше.</p>
+            <img class="indent-adjacent-elements__img indent-adjacent-elements__img-4" src="img/img6.png" alt="Фрагмент html-кода">
+            <p class="indent-adjacent-elements__p">В случае с заголовком, если ему необходим отступ сверху, последним элементом будет <i>section</i>. Именно для него задается <i>padding-top</i>, а не <i>div</i> с классом <i>container</i>. Свойства <i>margin</i>, которые стоят по умолчанию необходимо обнулить.</p>
+            <img class="indent-adjacent-elements__img indent-adjacent-elements__img-5" src="img/img7.png" alt="Отображение использования padding на web-странице">
+            <p class="indent-adjacent-elements__p">Это необходимо для более простого поиска отступов в будущем — для вас или того, кто будет верстать после вас. Кроме того, возможны серьёзные проблемы при динамическом дублировании или выводе вёрстки с нестандартной структурой отступов.</p>
+        </section>
+        <section class="indent-last-element" id="indent-last-element">
+            <h3 class="indent-last-element__title">Для последнего элемента группы отступ всегда обнуляется</h3>
+            <p class="indent-last-element__p">Для наглядности возьмём наш предыдущий пример с рецептами</p>
+            <p class="indent-last-element__p">Между рецептами расстояние одинаковое. Можно заметить, что и до следующего блока расстояние такое же.</p>
+            <img class="indent-last-element__img indent-last-element__img-1" src="img/img8.png" alt="Отображение отступов одинакового размера на web-странице">
+            <p class="indent-last-element__p">В соответствии со вторым принципом: последний <i>margin</i> обнуляется, а нижний отступ задаётся через <i>padding</i> для <i>section</i>. Я чаще всего задаю <i>padding</i> для секции с обоих сторон, если расстояние между секциями 100px задаю секциям <i>padding-top:50px</i> и <i>padding-bottom:50px</i>.</p>
+            <img class="indent-last-element__img indent-last-element__img-2" src="img/img9.png" alt="Отображение отступов одинакового размера на web-странице через просмотрщик кода">
+            <img class="indent-last-element__img indent-last-element__img-3" src="img/img10.png" alt="Фрагмент html-кода">
+            <img class="indent-last-element__img indent-last-element__img-4" src="img/img11.png" alt="Отображение строки навигации на web-странице">
+            <p class="indent-last-element__p">Для большего понимания рассмотрим другой пример, который часто встречается на практике:</p>
+            <img class="indent-last-element__img indent-last-element__img-5" src="img/img12.png" alt="Фрагмент html-кода">
+            <img class="indent-last-element__img indent-last-element__img-6" src="img/img13.png" alt="Фрагмент html-кода">
+            <p class="indent-last-element__p">Здесь нас интересует отступ между пунктами меню и списком с кнопкой поиска. Отступы между пунктами меню задаются так:</p>
+            <img class="indent-last-element__img indent-last-element__img-7" src="img/img14.png" alt="Фрагмент html-кода">
+            <p class="indent-last-element__p">Советую использовать псевдоклассы :last-child чаще других, например так:</p>
+            <img class="indent-last-element__img indent-last-element__img-8" src="img/img15.png" alt="Фрагмент html-кода">
+        </section>
+        <section class="footer">
             <h2 class="footer__title">Подытожим:</h2>
             <ul class="footer__list">
                 <li class="footer__item">— отступы задаём от предыдущего элемента к следующему</li>
@@ -88,8 +83,7 @@
                 <li class="footer__item">— последнему элементу группы отступ всегда обнуляем</li>
             </ul>
             <p class="footer__p">Конечно бывают исключения. Ведь макеты бывают различной сложности. Иногда базовые принципы приходится нарушать в угоду дизайнерского решения или простоты вёрстки. Но для этого эти принципы необходимо хорошо знать.</p>
-            </div>
-        </div>
+        </section>
     </article>
 </body>
 </html>

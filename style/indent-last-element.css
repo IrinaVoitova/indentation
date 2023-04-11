@@ -1,64 +1,64 @@
-.link-3 {
-    padding-top: 25px;
+.indent-last-element {
+    padding: 25px 0 50px 0;
 }
 
-.link-3__title {
+.indent-last-element__title {
     margin: 0 0 30px 0;
     font-weight: 900;
     font-size: 36px;
     line-height: 120%;
 }
 
-.link-3__p {
+.indent-last-element__p {
     margin: 0 0 30px 0;
 }
 
-.link-3__img {
+.indent-last-element__img {
     display: block;
     margin: 0 auto 30px auto;
 }
 
-.link-3__img:last-child {
+.indent-last-element__img:last-child {
     margin-bottom: 0;
 }
 
-.link-3__img-1 {
+.indent-last-element__img-1 {
     width: 600px;
     height: 600px;
 }
 
-.link-3__img-2 {
+.indent-last-element__img-2 {
     width: 600px;
     height: 607px;
 }
 
-.link-3__img-3 {
+.indent-last-element__img-3 {
     width: 1080px;
     height: 528px;
     margin: 0;
 }
 
-.link-3__img-4 {
+.indent-last-element__img-4 {
     width: 1080px;
     height: 530px;
 }
 
-.link-3__img-5 {
+.indent-last-element__img-5 {
     width: 1080px;
     height: 88px;
 }
 
-.link-3__img-6 {
+.indent-last-element__img-6 {
     width: 806px;
     height: 475px;
 }
 
-.link-3__img-7 {
+.indent-last-element__img-7 {
     width: 317px;
     height: 110px;
 }
 
-.link-3__img-8 {
+.indent-last-element__img-8 {
     width: 500px;
     height: 383px;
 }
