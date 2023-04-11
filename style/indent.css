@@ -22,7 +22,7 @@
 }
 
 .indent__block-2 {
-    width: 490px;
+    max-width: 490px;
 }
 
 .indent__p_block-2 {
@@ -34,7 +34,7 @@
 }
 
 .indent__block-3 {
-    width: 480px;
+    max-width: 480px;
 }
 
 .indent__p_block-3 {
